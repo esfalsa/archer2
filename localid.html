@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archer | tsptools</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <style type="text/css" media="screen">
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      #wrapper {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <span class="icon is-large has-text-primary">
+                        <span class="icon"><i class="mdi mdi-24px mdi-bullseye-arrow"></i></span>
+                    </span>
+                    <span class="has-text-primary has-text-weight-semibold">Archer</span>
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-tab" href="interactive.html">
+                        Interactive
+                    </a>
+
+                    <a class="navbar-item is-tab" href="static.html">
+                        Static
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section class="section is-medium">
+            <div class="container">
+                <article class="message is-primary">
+                    <div class="message-header">
+                        <p>How to get your localid</p>
+                    </div>
+                    <div class="message-body">
+                        <div class="content">
+                            <p>Getting your <span class="is-family-code">localid</span> is very easy. Just follow these steps:</p>
+                            <p><ol>
+                                <li>Log into <a href="https://nationstates.net" target="_blank">NationStates</a> and go to the <strong>Settings</strong> page.</li>
+                                <li>View the page source of the <strong>Settings</strong> page.</li>
+                                <li>Using <span class="is-family-code">CTRL+F</span> or <span class="is-family-code">⌘+F</span>, search for <span class="is-family-code">"localid"</span>.
+                                    You'll find a line that looks like this:<br>
+                                    <span class="is-family-code">&lt;input type="hidden" name="localid" value="abcdE1FGHiJkl"&gt;</span>
+                                </li>
+                                <li>Your localid is the random string inside the value parameter. In this case: <span class="is-family-code">abcdE1FGHiJkl</span></li>
+                            </p>
+                            <p>Important: Don't navigate through NationStates while using
+                                <span class="icon-text"><span class="icon is-small"><i class="mdi mdi-bullseye-arrow"></i></span><span>Archer</span></span>.
+                                Your <span class="is-family-code">localid</span> can change based on your activity. If it does, you'll get an error when trying to endorse a nation.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+    <footer class="footer has-text-centered">
+        <div class="content">
+            <p>
+              <strong class="has-text-weight-semibold">
+                Archer
+              </strong>
+              provided by <span class="has-text-primary">TSP</span>.
+              <span class="icon"><i class="mdi mdi-scale-balance"></i></span> <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL 3.0</a>
+            </p>
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lib/config.js"></script>
+    <script src="lib/main.js"></script>
+  </body>
+</html>
