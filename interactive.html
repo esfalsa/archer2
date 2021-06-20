@@ -71,10 +71,25 @@
                     <li class="steps-segment is-active" id="stepOne">
                         <span class="steps-marker">1</span>
                         <div class="steps-content">
+                            <p class="is-size-5">Login to NS</p>
+                            <p id="interactiveConfirmDesc">If you aren't logged in to NS in the frame below, go to NS and log in and return to this page. If you still aren't logged in, ensure your browser doesn't have third-party cookies or cross-site tracking blocked. If you don't want to enable those, you can use the <a href="static.html">Static</a> version of Archer instead.</p>
+                            <br>
+                            <div class="field has-addons has-addons-centered" id="interactiveConfirmForm">
+                                <div class="control">
+                                    <a class="button is-info" id="interactiveConfirmButton">
+                                        confirmed
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="steps-segment" id="stepTwo">
+                        <span class="steps-marker">2</span>
+                        <div class="steps-content">
                             <p class="is-size-5">Enter your nation name</p>
                             <p>Make sure you're a World Assembly member</p>
                             <br>
-                            <div class="field has-addons has-addons-centered" id="interactiveNationInput">
+                            <div class="field has-addons has-addons-centered is-hidden" id="interactiveNationInput">
                                 <div class="control">
                                     <input class="input" type="text" id="nationName" placeholder="testlandia">
                                 </div>
@@ -86,8 +101,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="steps-segment" id="stepTwo">
-                        <span class="steps-marker">2</span>
+                    <li class="steps-segment" id="stepThree">
+                        <span class="steps-marker">3</span>
                         <div class="steps-content">
                             <p class="is-size-5">Let us borrow your <span class="is-family-code">localid</span></p>
                             <p>For help getting your <span class="is-family-code">localid</span>, read our <a href="localid.html">instructions</a></p>
@@ -104,8 +119,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="steps-segment"  id="stepThree">
-                        <span class="steps-marker">3</span>
+                    <li class="steps-segment"  id="stepFour">
+                        <span class="steps-marker">4</span>
                         <div class="steps-content">
                             <p class="is-size-5">Click to endorse</p>
                             <p>We'll give you a bunch of buttons to click</p>
@@ -127,6 +142,7 @@
                 <div class="loader is-hidden"></div>
                 <div class="buttons is-hidden" id="endorsementField">
                 </div>
+                <iframe name="_archer" src="https://www.nationstates.net/" style="width:100%;"></iframe>
             </div>
         </section>
     </div>
@@ -137,7 +153,8 @@
                 Archer
               </strong>
               provided by <span class="has-text-primary">TSP</span>.
-              <span class="icon"><i class="mdi mdi-scale-balance"></i></span> <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL 3.0</a>
+              <span class="icon"><i class="mdi mdi-scale-balance"></i></span> <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL 3.0</a> - 
+             <button class="button is-small" id="clearLocalStorage">Clear Archer Data</button>
             </p>
         </div>
     </footer>
